@@ -16,7 +16,8 @@ Rails.application.routes.draw do
     registrations: 'public/registrations',
   }
   namespace :public do
-    root 'homes#top'
   end
+
+  root to: 'public/homes#top'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
