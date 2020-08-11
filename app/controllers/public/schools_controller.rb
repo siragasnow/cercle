@@ -10,4 +10,7 @@ class Public::SchoolsController < ApplicationController
 
   def update
   end
+
+  def destroy
+  end
 end

@@ -3,10 +3,11 @@ Rails.application.routes.draw do
     sessions: 'admin/sessions',
   }
   namespace :admin do
+    get 'homes/top' => 'homes/top'
+    resources :genres, only: [:index, :create, :destroy]
     get 'contacts/index'
     get 'contacts/show'
     get 'schools/index'
-    get 'genres/index'
     get 'menus/index'
     get 'menus/show'
   end
@@ -16,6 +17,8 @@ Rails.application.routes.draw do
     registrations: 'public/registrations',
   }
   namespace :public do
+    resources :schools, only: [:index, :show, :edit, :update, :destroy]
+    resources :menus
   end
 
   root to: 'public/homes#top'
