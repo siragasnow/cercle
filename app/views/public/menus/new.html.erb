@@ -18,21 +18,21 @@
 		<table class="table">
 			<tr>
 				<th>主食</th>
-				<td><%= f.text_field :staple_food, placeholder:"例）ご飯" %></td>
+				<td><%= f.text_field :staple_food, size: "30", placeholder:"例）ご飯" %></td>
 				<th>汁物</th>
-				<td><%= f.text_field :soup, placeholder:"例）味噌汁" %></td>
+				<td><%= f.text_field :soup, size: "30", placeholder:"例）味噌汁" %></td>
 			</tr>
 			<tr>
 				<th>主菜</th>
-				<td><%= f.text_field :main_dish, placeholder:"例）鯖の塩焼き" %></td>
+				<td><%= f.text_field :main_dish, size: "30", placeholder:"例）鯖の塩焼き" %></td>
 				<th>デザート</th>
-				<td><%= f.text_field :dessert, placeholder:"例）みかん" %></td>
+				<td><%= f.text_field :dessert, size: "30", placeholder:"例）みかん" %></td>
 			</tr>
 			<tr>
 				<th>副菜</th>
-				<td><%= f.text_field :side_dish, placeholder:"例）切り干し大根の含め煮" %></td>
+				<td><%= f.text_field :side_dish, size: "30", placeholder:"例）切り干し大根の含め煮" %></td>
 				<th>飲み物</th>
-				<td><%= f.text_field :drink, placeholder:"例）牛乳" %></td>
+				<td><%= f.text_field :drink, size: "30", placeholder:"例）牛乳" %></td>
 			</tr>
 		</table>
 		<div class="step-title">
@@ -43,11 +43,11 @@
 				<th>エネルギー</th>
 				<td><%= f.text_field :energy, placeholder:"例）650" %>　kcal</td>
 				<th>脂質</th>
-				<td><%= f.text_field :fat, placeholder:"例）25.0" %>　g</td>
+				<td><%= f.text_field :fat, placeholder:"例）15.0" %>　g</td>
 			</tr>
 			<tr>
 				<th>タンパク質</th>
-				<td><%= f.text_field :protein, placeholder:"例）15.0" %>　g</td>
+				<td><%= f.text_field :protein, placeholder:"例）25.0" %>　g</td>
 				<th>塩分量</th>
 				<td><%= f.text_field :sodium, placeholder:"例）2.0" %>　g</td>
 			</tr>

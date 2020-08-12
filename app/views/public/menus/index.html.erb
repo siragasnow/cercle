@@ -1,2 +1,33 @@
-<h1>献立一覧</h1>
-<p>Find me in app/views/public/menus/index.html.erb</p>
+<h2>献立一覧</h2>
+
+<% @menus.each do |menu| %>
+	<div class="row">
+		<div class="menu-box">
+			<div class="col-md-4">
+				<div class="menu-image">
+					<%= attachment_image_tag menu, :image, :fill, 300, 170, fallback: "no-image.jpg", size:'300x170' %>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="school-name">
+					<%= link_to public_menu_path(menu.id) do %>
+						<h4><%= menu.title %></h4>
+					<% end %>
+					<h4><%= menu.school.name %></h4>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<ul>
+					<li>主食：<%= menu.staple_food %></li>
+					<li>主菜：<%= menu.main_dish %></li>
+					<li>副菜：<%= menu.side_dish %></li>
+					<li>汁物：<%= menu.soup %></li>
+					<li>デザート：<%= menu.dessert %></li>
+					<li>飲み物：<%= menu.drink %></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<% end %>
+
+

@@ -1,8 +1,10 @@
 class Public::MenusController < ApplicationController
   def index
+    @menus = Menu.all
   end
 
   def show
+    @menu = Menu.find(params[:id])
   end
 
   def new
@@ -17,12 +19,19 @@ class Public::MenusController < ApplicationController
   end
 
   def edit
+    @menu = Menu.find(params[:id])
   end
 
   def update
+    @menu = Menu.find(params[:id])
+    @menu.update(menu_params)
+    redirect_to public_menu_path
   end
 
   def destroy
+    @menu = Menu.find(params[:id])
+    @menu.destroy
+    redirect_to public_menus_path
   end
 
   private
