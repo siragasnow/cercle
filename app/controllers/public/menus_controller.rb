@@ -1,6 +1,6 @@
 class Public::MenusController < ApplicationController
   def index
-    @menus = Menu.all
+    @menus = Menu.where(status: :公開中)
   end
 
   def show
@@ -36,6 +36,6 @@ class Public::MenusController < ApplicationController
 
   private
   def menu_params
-    params.require(:menu).permit(:genre_id, :title, :staple_food, :main_dish, :side_dish, :soup, :dessert, :drink, :energy, :protein, :fat, :sodium, :comment, :image)
+    params.require(:menu).permit(:genre_id, :title, :staple_food, :main_dish, :side_dish, :soup, :dessert, :drink, :energy, :protein, :fat, :sodium, :comment, :image, :status)
   end
 end

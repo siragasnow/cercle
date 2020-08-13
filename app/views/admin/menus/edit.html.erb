@@ -1,0 +1,53 @@
+<p class="top-back" style="float: right;">
+	<%= link_to "献立一覧にもどる", admin_menus_path %>　/　<%= link_to "Topにもどる", admin_homes_top_path %>
+</p>
+<h2><%= @menu.title %></h2>
+<div class="row">
+	<div class="genre">
+		<p>ジャンル：<%= @menu.genre.name %></p>
+	</div>
+	<div class="col-md-6">
+		<div class="menu-image">
+			<%= attachment_image_tag @menu, :image, :fill, 500, 300, fallback: "no-image.jpg", size:'500x300' %>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div clas="menu-school-name">
+			<h3>by　<%= @menu.school.name %></h3>
+		</div>
+		<div class="menu-list">
+			<ul>
+				<li>主食：<%= @menu.staple_food %></li>
+				<li>主菜：<%= @menu.main_dish %></li>
+				<li>副菜：<%= @menu.side_dish %></li>
+				<li>汁物：<%= @menu.soup %></li>
+				<li>デザート：<%= @menu.dessert %></li>
+				<li>飲み物：<%= @menu.drink %></li>
+			</ul>
+		</div>
+		<div class="nutritional-value">
+			<h4>栄養価（一人当たり）</h4>
+			<ul>
+				<li>エネルギー：<%= @menu.energy %></li>
+				<li>タンパク質：<%= @menu.protein %></li>
+				<li>脂質：<%= @menu.fat %></li>
+				<li>塩分量：<%= @menu.sodium %></li>
+			</ul>
+		</div>
+	</div>
+	<div class="comment">
+		<h3>コメント</h3>
+		<div class="comment-area">
+			<p><%= @menu.comment %></p>
+		</div>
+	</div>
+	<div class="published">
+		<%= form_with(model: @menu, url: admin_menu_path(@menu.id)) do |f| %>
+			<%= f.radio_button :status, :公開中 %>
+			<%= f.label :status, "公開中", {value: :公開中} %>
+			<%= f.radio_button :status, :非公開 %>
+			<%= f.label :status, "非公開", {value: :非公開} %>
+			<%= f.submit "設定する", class:"btn btn-primary" %>
+		<% end %>
+	</div>
+</div>

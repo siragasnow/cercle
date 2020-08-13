@@ -5,11 +5,10 @@ Rails.application.routes.draw do
   namespace :admin do
     get 'homes/top' => 'homes/top'
     resources :genres, only: [:index, :create, :destroy]
+    resources :menus, only: [:index, :edit, :update]
     get 'contacts/index'
     get 'contacts/show'
     get 'schools/index'
-    get 'menus/index'
-    get 'menus/show'
   end
 
   devise_for :schools, controllers: {
