@@ -1,2 +1,30 @@
-<h1>Public::Schools#edit</h1>
-<p>Find me in app/views/public/schools/edit.html.erb</p>
+<h2>登録情報編集</h2>
+<div class="row">
+	<%= form_for(@school,url:public_school_path) do |f| %>
+		<table class="table">
+			<tr>
+				<th>学校名</th>
+				<td><%= f.text_field :name, size: "30" %></td>
+			</tr>
+			<tr>
+				<th>メールアドレス</th>
+				<td><%= f.text_field :email, size: "30" %></td>
+			</tr>
+			<tr>
+				<th>郵便番号</th>
+				<td><%= f.text_field :postcode, size: "30" %></td>
+			</tr>
+			<tr>
+				<th>住所</th>
+				<td><%= f.text_field :street_address, size: "30" %></td>
+			</tr>
+			<tr>
+				<th>電話番号</th>
+				<td><%= f.text_field :phone_number, size: "30" %></td>
+			</tr>
+		</table>
+		<div class="text-center">
+        	<%= f.submit "編集内容を保存する", class: "btn btn-primary" %>
+    	</div>
+	<% end %>
+</div>

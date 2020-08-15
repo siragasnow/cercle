@@ -1,2 +1,20 @@
-<h1>Public::Schools#show</h1>
-<p>Find me in app/views/public/schools/show.html.erb</p>
+<h2>My献立一覧</h2>
+<div class="row">
+	<table class="table table-bordered">
+		<% @menus.each do |menu| %>
+			<tr>
+				<td><%= attachment_image_tag menu, :image, :fill, 300, 170, fallback: "no-image.jpg", size:'180x100' %></td>
+				<td>
+					<%= link_to public_menu_path(menu.id) do %>
+						<h4><%= menu.title %></h4>
+					<% end %>
+				</td>
+				<td>お気に入り数</td>
+				<% if @school.id == current_school.id %>
+				<td><%= menu.status %></td>
+				<% end %>
+			</tr>
+		<% end %>
+	</table>
+</div>
+
