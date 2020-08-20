@@ -15867,3 +15867,1625 @@ Processing by Public::MenusController#new as HTML
 Completed 200 OK in 103ms (Views: 96.0ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/" for 10.0.2.2 at 2020-08-17 00:34:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 764ms (Views: 755.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schools/sign_in" for 10.0.2.2 at 2020-08-17 00:34:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (0.9ms)
+  Rendered public/sessions/new.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 123ms (Views: 110.3ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/schools/sign_in" for 10.0.2.2 at 2020-08-17 00:35:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7ai+HovpuQ9uV8u3cSlNWzfyk0ryOynTgf0emFfEqsFI24wR43Y7zB+dOzNHZ+TsvOk9i3XxBfo4R9oGW2QHnA==", "school"=>{"email"=>"yoshida@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."email" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["email", "yoshida@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/public/menus
+Completed 302 Found in 281ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-17 00:35:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.5ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/index.html.erb:16
+  Rendered public/menus/index.html.erb within layouts/application (29.1ms)
+  [1m[36mSchool Load (1.0ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 174ms (Views: 159.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-17 00:35:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.3ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/index.html.erb:16
+  Rendered public/menus/index.html.erb within layouts/application (4.7ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 89ms (Views: 83.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-17 00:35:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.5ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/index.html.erb:16
+  Rendered public/menus/index.html.erb within layouts/application (4.5ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 97ms (Views: 90.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-17 00:35:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.4ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/index.html.erb:16
+  Rendered public/menus/index.html.erb within layouts/application (4.6ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 82ms (Views: 78.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-17 00:35:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.4ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/index.html.erb:16
+  Rendered public/menus/index.html.erb within layouts/application (5.3ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 89ms (Views: 80.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-17 00:35:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.4ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/index.html.erb:16
+  Rendered public/menus/index.html.erb within layouts/application (6.3ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 89ms (Views: 83.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-17 00:35:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.9ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/index.html.erb:16
+  Rendered public/menus/index.html.erb within layouts/application (6.0ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 85ms (Views: 76.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-17 00:35:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.8ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/index.html.erb:16
+  Rendered public/menus/index.html.erb within layouts/application (4.5ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 97ms (Views: 91.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-17 00:35:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.4ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/index.html.erb:16
+  Rendered public/menus/index.html.erb within layouts/application (5.5ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 90ms (Views: 83.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/public/menus/new" for 10.0.2.2 at 2020-08-17 00:35:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#new as HTML
+  Rendering public/menus/new.html.erb within layouts/application
+  [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/menus/new.html.erb:12
+  Rendered public/menus/new.html.erb within layouts/application (15.2ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 104ms (Views: 98.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/public/menus/new" for 10.0.2.2 at 2020-08-17 00:35:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#new as HTML
+  Rendering public/menus/new.html.erb within layouts/application
+  [1m[36mGenre Load (0.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/menus/new.html.erb:12
+  Rendered public/menus/new.html.erb within layouts/application (4.9ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 84ms (Views: 79.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/public/menus/new" for 10.0.2.2 at 2020-08-17 00:35:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#new as HTML
+  Rendering public/menus/new.html.erb within layouts/application
+  [1m[36mGenre Load (0.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/menus/new.html.erb:12
+  Rendered public/menus/new.html.erb within layouts/application (5.5ms)
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 89ms (Views: 85.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/public/menus/new" for 10.0.2.2 at 2020-08-17 00:35:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#new as HTML
+  Rendering public/menus/new.html.erb within layouts/application
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/menus/new.html.erb:12
+  Rendered public/menus/new.html.erb within layouts/application (4.2ms)
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 95ms (Views: 89.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-17 00:35:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.7ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/index.html.erb:16
+  Rendered public/menus/index.html.erb within layouts/application (6.1ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 87ms (Views: 78.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/public/menus/2" for 10.0.2.2 at 2020-08-17 00:35:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMenu Load (1.0ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/menus_controller.rb:7
+  Rendering public/menus/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/show.html.erb:4
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/show.html.erb:13
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/show.html.erb:41
+  Rendered public/menus/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 99ms (Views: 90.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/attachments/968989c7c89deb9320dd35a5b1f6f193d291a1dd/store/fill/500/300/a664c051a783419b09f67c6db38504b479f9f721a8b2b69230b6957679ac/image" for 10.0.2.2 at 2020-08-17 00:35:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2020-08-17 00:35:19 +0000] GET "/968989c7c89deb9320dd35a5b1f6f193d291a1dd/store/fill/500/300/a664c051a783419b09f67c6db38504b479f9f721a8b2b69230b6957679ac/image" 200 236.7ms
+
+Started GET "/public/menus/2/edit" for 10.0.2.2 at 2020-08-17 00:35:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMenu Load (0.8ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/menus_controller.rb:22
+  Rendering public/menus/edit.html.erb within layouts/application
+  [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/menus/edit.html.erb:12
+  Rendered public/menus/edit.html.erb within layouts/application (5.7ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 90ms (Views: 80.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-17 00:36:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.3ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  [1m[36mSchool Load (0.8ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/index.html.erb:16
+  Rendered public/menus/index.html.erb within layouts/application (5.6ms)
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 103ms (Views: 96.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-08-17 00:36:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.5ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 88ms (Views: 84.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-17 00:36:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.4ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/index.html.erb:16
+  Rendered public/menus/index.html.erb within layouts/application (4.3ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 111ms (Views: 103.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/public/menus/2" for 10.0.2.2 at 2020-08-17 00:36:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMenu Load (1.0ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/menus_controller.rb:7
+  Rendering public/menus/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.6ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/show.html.erb:4
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/show.html.erb:13
+  [1m[36mSchool Load (0.8ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/show.html.erb:41
+  Rendered public/menus/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 104ms (Views: 91.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/public/menus/2/edit" for 10.0.2.2 at 2020-08-17 00:36:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMenu Load (0.8ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/menus_controller.rb:22
+  Rendering public/menus/edit.html.erb within layouts/application
+  [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/menus/edit.html.erb:12
+  Rendered public/menus/edit.html.erb within layouts/application (5.4ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 114ms (Views: 103.1ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/schools/sign_out" for 10.0.2.2 at 2020-08-17 00:36:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mahekUNc7AaxnFUO3e/xMfv6MbNUlNnvD5mq+bmki3AMZZyQfCSCoRG8496sSpmDnFI0dRxjn/8KU/dr5y2kHA=="}
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-08-17 00:36:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 72ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-08-17 05:47:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 644ms (Views: 636.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schools/sign_in" for 10.0.2.2 at 2020-08-17 05:47:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (0.9ms)
+  Rendered public/sessions/new.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 141ms (Views: 120.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/schools/sign_in" for 10.0.2.2 at 2020-08-17 05:47:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SM3KPRV1hQLUpcNiMg0qv5M5goguuXOkq/QgoIfXT2yaXnWo2uEBj4uml4O5gxYIyEno5j2LYUjCU1lxm50E+g==", "school"=>{"email"=>"yoshida@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mSchool Load (0.9ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."email" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["email", "yoshida@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/public/menus
+Completed 302 Found in 283ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-17 05:47:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.4ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/index.html.erb:16
+  Rendered public/menus/index.html.erb within layouts/application (23.1ms)
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 119ms (Views: 106.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/public/schools.1" for 10.0.2.2 at 2020-08-17 05:47:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SchoolsController#index as 
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:3
+  Rendering public/schools/index.html.erb within layouts/application
+  Rendered public/schools/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 154ms (Views: 126.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/public/schools/1" for 10.0.2.2 at 2020-08-17 05:47:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SchoolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:7
+  Rendering public/schools/show.html.erb within layouts/application
+  [1m[36mMenu Load (0.5ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."school_id" = ?[0m  [["school_id", 1]]
+  ↳ app/views/public/schools/show.html.erb:4
+  [1m[36mSchool Load (0.8ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/schools/show.html.erb:13
+  Rendered public/schools/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 102ms (Views: 89.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/attachments/bf732f6b7cad01ccf326bc1f66fcb5b891ef9479/store/fill/300/170/5090cb75fbbb9187c01504a7ed504295b4a6bbf9a6607a65cea6066762fe/image" for 10.0.2.2 at 2020-08-17 05:47:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2020-08-17 05:47:39 +0000] GET "/bf732f6b7cad01ccf326bc1f66fcb5b891ef9479/store/fill/300/170/5090cb75fbbb9187c01504a7ed504295b4a6bbf9a6607a65cea6066762fe/image" 200 461.5ms
+
+Started GET "/public/schools.1" for 10.0.2.2 at 2020-08-17 05:47:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SchoolsController#index as 
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:3
+  Rendering public/schools/index.html.erb within layouts/application
+  Rendered public/schools/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 134ms (Views: 109.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/public/schools/1/edit" for 10.0.2.2 at 2020-08-17 05:47:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SchoolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchool Load (0.7ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:12
+  Rendering public/schools/edit.html.erb within layouts/application
+  Rendered public/schools/edit.html.erb within layouts/application (2.1ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 90ms (Views: 82.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-17 05:47:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.4ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/index.html.erb:16
+  Rendered public/menus/index.html.erb within layouts/application (4.9ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 90ms (Views: 83.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/public/menus/2" for 10.0.2.2 at 2020-08-17 05:47:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMenu Load (1.0ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/menus_controller.rb:7
+  Rendering public/menus/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/show.html.erb:4
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/show.html.erb:13
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/show.html.erb:41
+  Rendered public/menus/show.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 105ms (Views: 94.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-17 05:55:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.7ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/index.html.erb:16
+  Rendered public/menus/index.html.erb within layouts/application (5.6ms)
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 109ms (Views: 102.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/public/schools.1" for 10.0.2.2 at 2020-08-17 05:55:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SchoolsController#index as 
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:3
+  Rendering public/schools/index.html.erb within layouts/application
+  Rendered public/schools/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 134ms (Views: 109.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-08-19 01:33:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 689ms (Views: 680.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schools/sign_up" for 10.0.2.2 at 2020-08-19 01:33:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RegistrationsController#new as HTML
+  Rendering public/registrations/new.html.erb within layouts/application
+  Rendered public/shared/_error_messages.html.erb (0.4ms)
+  Rendered public/shared/_links.html.erb (0.9ms)
+  Rendered public/registrations/new.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 139ms (Views: 118.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/schools/sign_in" for 10.0.2.2 at 2020-08-19 01:33:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (0.9ms)
+  Rendered public/sessions/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 116ms (Views: 113.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/schools/sign_in" for 10.0.2.2 at 2020-08-19 01:33:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tnlpg9NSrRTQcQskn3NMjOQOOUhhINam3A76TBSCq1KZY/DzKH288V4Nqv6ZvwZ0WFQXhLIRA6o0HGme2h1jqA==", "school"=>{"email"=>"yoshida@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."email" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["email", "yoshida@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/public/menus
+Completed 302 Found in 282ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-19 01:33:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/index.html.erb:16
+  Rendered public/menus/index.html.erb within layouts/application (32.4ms)
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 126ms (Views: 113.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/public/schools.1" for 10.0.2.2 at 2020-08-19 01:33:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SchoolsController#index as 
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:3
+  Rendering public/schools/index.html.erb within layouts/application
+  Rendered public/schools/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 123ms (Views: 95.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/public/schools/1" for 10.0.2.2 at 2020-08-19 01:33:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SchoolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:7
+  Rendering public/schools/show.html.erb within layouts/application
+  [1m[36mMenu Load (0.4ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."school_id" = ?[0m  [["school_id", 1]]
+  ↳ app/views/public/schools/show.html.erb:4
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/schools/show.html.erb:13
+  Rendered public/schools/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 102ms (Views: 91.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/public/schools.1" for 10.0.2.2 at 2020-08-19 01:33:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SchoolsController#index as 
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:3
+  Rendering public/schools/index.html.erb within layouts/application
+  Rendered public/schools/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 127ms (Views: 102.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/public/schools/1/edit" for 10.0.2.2 at 2020-08-19 01:33:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SchoolsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:12
+  Rendering public/schools/edit.html.erb within layouts/application
+  Rendered public/schools/edit.html.erb within layouts/application (1.5ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 83ms (Views: 75.9ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/public/schools/1" for 10.0.2.2 at 2020-08-19 01:33:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SchoolsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TnsJjWCh18T7tZcPWZb+aXh5Octhjt8ZVOsFT/4hBsNVSNm23IZP1j1OMCrUPlvN6EN+MwLIWC5tdM7qALbNng==", "school"=>{"name"=>"吉田小学校", "email"=>"yoshida@gmail.com", "postcode"=>"1234567", "street_address"=>"東京都足立区北千住１−１−２", "phone_number"=>"00012345678"}, "commit"=>"編集内容を保存する", "id"=>"1"}
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/schools_controller.rb:17
+  [1m[36mSchool Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "schools" WHERE "schools"."email" = ? AND "schools"."id" != ? LIMIT ?[0m  [["email", "yoshida@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/public/schools_controller.rb:17
+Redirected to http://localhost:3000/public/schools/1
+Completed 302 Found in 10ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/public/schools/1" for 10.0.2.2 at 2020-08-19 01:33:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SchoolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:7
+  Rendering public/schools/show.html.erb within layouts/application
+  [1m[36mMenu Load (0.4ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."school_id" = ?[0m  [["school_id", 1]]
+  ↳ app/views/public/schools/show.html.erb:4
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/schools/show.html.erb:13
+  Rendered public/schools/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 94ms (Views: 88.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/public/menus/2" for 10.0.2.2 at 2020-08-19 01:33:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMenu Load (1.3ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/menus_controller.rb:7
+  Rendering public/menus/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/show.html.erb:4
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/show.html.erb:13
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/show.html.erb:41
+  Rendered public/menus/show.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 100ms (Views: 92.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-19 01:34:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.4ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/index.html.erb:16
+  Rendered public/menus/index.html.erb within layouts/application (5.4ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 105ms (Views: 100.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/public/menus/2" for 10.0.2.2 at 2020-08-19 01:34:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMenu Load (1.1ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" WHERE "menus"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/public/menus_controller.rb:7
+  Rendering public/menus/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.7ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/show.html.erb:4
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/show.html.erb:13
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/public/menus/show.html.erb:41
+  Rendered public/menus/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 93ms (Views: 84.5ms | ActiveRecord: 2.8ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddStatusToMenus (20200813065055)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "amenus" ("id" integer NOT NULL PRIMARY KEY, "school_id" integer NOT NULL, "genre_id" integer NOT NULL, "title" varchar NOT NULL, "staple_food" varchar NOT NULL, "main_dish" varchar NOT NULL, "side_dish" varchar NOT NULL, "soup" varchar NOT NULL, "dessert" varchar NOT NULL, "drink" varchar NOT NULL, "energy" integer NOT NULL, "protein" float NOT NULL, "fat" float NOT NULL, "sodium" float NOT NULL, "comment" text NOT NULL, "image_id" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "status" integer DEFAULT 0 NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "amenus" ("id","school_id","genre_id","title","staple_food","main_dish","side_dish","soup","dessert","drink","energy","protein","fat","sodium","comment","image_id","created_at","updated_at","status")
+                     SELECT "id","school_id","genre_id","title","staple_food","main_dish","side_dish","soup","dessert","drink","energy","protein","fat","sodium","comment","image_id","created_at","updated_at","status" FROM "menus"[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE "menus"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "menus" ("id" integer NOT NULL PRIMARY KEY, "school_id" integer NOT NULL, "genre_id" integer NOT NULL, "title" varchar NOT NULL, "staple_food" varchar NOT NULL, "main_dish" varchar NOT NULL, "side_dish" varchar NOT NULL, "soup" varchar NOT NULL, "dessert" varchar NOT NULL, "drink" varchar NOT NULL, "energy" integer NOT NULL, "protein" float NOT NULL, "fat" float NOT NULL, "sodium" float NOT NULL, "comment" text NOT NULL, "image_id" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "menus" ("id","school_id","genre_id","title","staple_food","main_dish","side_dish","soup","dessert","drink","energy","protein","fat","sodium","comment","image_id","created_at","updated_at")
+                     SELECT "id","school_id","genre_id","title","staple_food","main_dish","side_dish","soup","dessert","drink","energy","protein","fat","sodium","comment","image_id","created_at","updated_at" FROM "amenus"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "amenus"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200813065055"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateContacts (20200809055519)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE "contacts"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200809055519"]]
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateFavorites (20200809055140)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mDROP TABLE "favorites"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200809055140"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateGenres (20200809055030)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE "genres"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200809055030"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateMenus (20200809053947)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE "menus"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200809053947"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateAdmins (20200809053523)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mDROP INDEX "index_admins_on_reset_password_token"[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mDROP INDEX "index_admins_on_email"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE "admins"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200809053523"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateSchools (20200809052633)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mDROP INDEX "index_schools_on_reset_password_token"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mDROP INDEX "index_schools_on_email"[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "schools"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200809052633"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateSchools (20200809052633)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20200809052633_devise_create_schools.rb:5
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schools" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "name" varchar NOT NULL, "postcode" varchar NOT NULL, "street_address" varchar NOT NULL, "phone_number" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200809052633_devise_create_schools.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_schools_on_email" ON "schools" ("email")[0m
+  ↳ db/migrate/20200809052633_devise_create_schools.rb:42
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_schools_on_reset_password_token" ON "schools" ("reset_password_token")[0m
+  ↳ db/migrate/20200809052633_devise_create_schools.rb:43
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200809052633"]]
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateAdmins (20200809053523)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "admins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "name" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200809053523_devise_create_admins.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_email" ON "admins" ("email")[0m
+  ↳ db/migrate/20200809053523_devise_create_admins.rb:40
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  ↳ db/migrate/20200809053523_devise_create_admins.rb:41
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200809053523"]]
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateMenus (20200809053947)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "menus" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "school_id" integer NOT NULL, "genre_id" integer NOT NULL, "title" varchar NOT NULL, "staple_food" varchar NOT NULL, "main_dish" varchar NOT NULL, "side_dish" varchar NOT NULL, "soup" varchar NOT NULL, "dessert" varchar NOT NULL, "drink" varchar NOT NULL, "energy" integer NOT NULL, "protein" float NOT NULL, "fat" float NOT NULL, "sodium" float NOT NULL, "comment" text NOT NULL, "image_id" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200809053947_create_menus.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200809053947"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateGenres (20200809055030)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "genres" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200809055030_create_genres.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200809055030"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateFavorites (20200809055140)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "school_id" integer, "menu_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_d9ac4da394"
+FOREIGN KEY ("school_id")
+  REFERENCES "schools" ("id")
+, CONSTRAINT "fk_rails_a7c075154e"
+FOREIGN KEY ("menu_id")
+  REFERENCES "menus" ("id")
+)[0m
+  ↳ db/migrate/20200809055140_create_favorites.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_favorites_on_school_id" ON "favorites" ("school_id")[0m
+  ↳ db/migrate/20200809055140_create_favorites.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_favorites_on_menu_id" ON "favorites" ("menu_id")[0m
+  ↳ db/migrate/20200809055140_create_favorites.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200809055140"]]
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateContacts (20200809055519)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "contacts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "school_id" integer NOT NULL, "name" varchar NOT NULL, "email" varchar NOT NULL, "message" text NOT NULL, "contact_status" integer DEFAULT 0 NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200809055519_create_contacts.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200809055519"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddStatusToMenus (20200813065055)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "menus" ADD "status" integer DEFAULT 0 NOT NULL[0m
+  ↳ db/migrate/20200813065055_add_status_to_menus.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200813065055"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-19 06:45:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.5ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  Rendered public/menus/index.html.erb within layouts/application (3.5ms)
+  [1m[36mSchool Load (0.8ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 643ms (Views: 626.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/schools/sign_in" for 10.0.2.2 at 2020-08-19 06:45:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (0.9ms)
+  Rendered public/sessions/new.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 129ms (Views: 103.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/schools/sign_in" for 10.0.2.2 at 2020-08-19 06:46:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uJQEncA8+Z7hOqfp/fs6OBKeS4I2J+GG8GNonsFgytRJEMB16K1vpqFrwdOqfE/5XOq/hMzu6Tdalq5n8Sxwng==", "school"=>{"email"=>"yoshida@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."email" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["email", "yoshida@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.5ms)
+
+
+Processing by Public::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uJQEncA8+Z7hOqfp/fs6OBKeS4I2J+GG8GNonsFgytRJEMB16K1vpqFrwdOqfE/5XOq/hMzu6Tdalq5n8Sxwng==", "school"=>{"email"=>"yoshida@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (0.8ms)
+  Rendered public/sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 356ms (Views: 92.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schools/sign_in" for 10.0.2.2 at 2020-08-19 06:46:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (1.2ms)
+  Rendered public/sessions/new.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 578ms (Views: 560.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/schools/sign_in" for 10.0.2.2 at 2020-08-19 06:46:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w5OQUMQAFfn3l2XIuRjvuCFnBAEQi2WfpfQfBQehhuEyF1S47JGDwbfGA/Lun5p5bxPwB+pCbS4PAdn8N+08qw==", "school"=>{"email"=>"yoshida@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."email" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["email", "yoshida@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.5ms)
+
+
+Processing by Public::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w5OQUMQAFfn3l2XIuRjvuCFnBAEQi2WfpfQfBQehhuEyF1S47JGDwbfGA/Lun5p5bxPwB+pCbS4PAdn8N+08qw==", "school"=>{"email"=>"yoshida@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (0.8ms)
+  Rendered public/sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 351ms (Views: 89.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-08-19 07:00:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 607ms (Views: 598.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schools/sign_in" for 10.0.2.2 at 2020-08-19 07:00:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (1.0ms)
+  Rendered public/sessions/new.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 134ms (Views: 122.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/schools" for 10.0.2.2 at 2020-08-19 07:00:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/schools"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/schools.1" for 10.0.2.2 at 2020-08-19 07:00:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/schools.1"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/menu" for 10.0.2.2 at 2020-08-19 07:00:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/menu"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/menus" for 10.0.2.2 at 2020-08-19 07:00:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/menus"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2020-08-19 07:01:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 618ms (Views: 609.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schools/sign_in" for 10.0.2.2 at 2020-08-19 07:01:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (1.0ms)
+  Rendered public/sessions/new.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 130ms (Views: 118.3ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/schools/sign_in" for 10.0.2.2 at 2020-08-19 07:01:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BEhqHAlMReqxPgnASHKp4kqR2VjGwDzyZF6so2yUCAL1zK70Id3T0vFvb/of9dwjBOUtXjwJNEPOq2paXNiySA==", "school"=>{"email"=>"yoshida@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mSchool Load (0.8ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."email" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["email", "yoshida@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.8ms)
+
+
+Processing by Public::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BEhqHAlMReqxPgnASHKp4kqR2VjGwDzyZF6so2yUCAL1zK70Id3T0vFvb/of9dwjBOUtXjwJNEPOq2paXNiySA==", "school"=>{"email"=>"yoshida@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (0.8ms)
+  Rendered public/sessions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 358ms (Views: 96.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-08-19 07:01:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 104ms (Views: 99.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/sign_in" for 10.0.2.2 at 2020-08-19 07:01:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 109ms (Views: 97.4ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/admin/sign_in" for 10.0.2.2 at 2020-08-19 07:01:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q2Drwa6EdqviR3AXgNd1HtDZOWSydj3bRH5/dA6RjrfABaBxvqt1NZENEuiZHsXkrN3kRksM94wbxGlcAyFvww==", "admin"=>{"email"=>"cercle@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "cercle@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.7ms)
+
+
+Processing by Admin::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q2Drwa6EdqviR3AXgNd1HtDZOWSydj3bRH5/dA6RjrfABaBxvqt1NZENEuiZHsXkrN3kRksM94wbxGlcAyFvww==", "admin"=>{"email"=>"cercle@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 348ms (Views: 86.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-08-19 07:40:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 645ms (Views: 638.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schools/sign_in" for 10.0.2.2 at 2020-08-19 07:40:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#new as HTML
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (0.9ms)
+  Rendered public/sessions/new.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 126ms (Views: 98.8ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/schools/sign_in" for 10.0.2.2 at 2020-08-19 07:41:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jCScyPNkkjX4kcYdXOr0Lemo3ZovCDBCt8auLROy9WR9oFgg2/UEDbjAoCcLbYHsp9wpnNXBOPMdM2jUI/5PLg==", "school"=>{"email"=>"yoshida@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."email" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["email", "yoshida@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.5ms)
+
+
+Processing by Public::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jCScyPNkkjX4kcYdXOr0Lemo3ZovCDBCt8auLROy9WR9oFgg2/UEDbjAoCcLbYHsp9wpnNXBOPMdM2jUI/5PLg==", "school"=>{"email"=>"yoshida@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering public/sessions/new.html.erb within layouts/application
+  Rendered public/shared/_links.html.erb (0.7ms)
+  Rendered public/sessions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 353ms (Views: 93.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schools/sign_up" for 10.0.2.2 at 2020-08-19 07:41:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RegistrationsController#new as HTML
+  Rendering public/registrations/new.html.erb within layouts/application
+  Rendered public/shared/_error_messages.html.erb (0.4ms)
+  Rendered public/shared/_links.html.erb (0.9ms)
+  Rendered public/registrations/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 107ms (Views: 105.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mSchool Load (1.0ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mAdmin Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "cercle@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:8
+  [1m[36mAdmin Create (1.7ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "cercle@gmail.com"], ["encrypted_password", "$2a$12$VtA0HZQCtNW/x.8Uhn5dAeKZs0Oru1.xip6QszsAVD670ArC12lNK"], ["name", "owner"], ["created_at", "2020-08-19 07:43:09.102814"], ["updated_at", "2020-08-19 07:43:09.102814"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+Started GET "/admin/sign_up" for 10.0.2.2 at 2020-08-19 07:43:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/devise-4.7.2/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/devise-4.7.2/app/views/devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/devise-4.7.2/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/devise-4.7.2/app/views/devise/registrations/new.html.erb within layouts/application (36.1ms)
+Completed 200 OK in 1164ms (Views: 1144.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/sign_in" for 10.0.2.2 at 2020-08-19 07:43:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 94ms (Views: 90.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/sign_in" for 10.0.2.2 at 2020-08-19 07:43:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a9R25+My4K/6IGwfvJ52zTelFkoml4PGxrNBXxC7SyMAsT1X8x3jMYlqDuClV8Y3S6HLaN/tSZGZCVd3HQuqVw==", "admin"=>{"email"=>"cercle@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "cercle@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin/homes/top
+Completed 302 Found in 280ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/homes/top" for 10.0.2.2 at 2020-08-19 07:43:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  Rendered admin/homes/top.html.erb within layouts/application (0.8ms)
+  [1m[36mAdmin Load (1.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 105ms (Views: 98.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/menus" for 10.0.2.2 at 2020-08-19 07:43:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::MenusController#index as HTML
+  Rendering admin/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.5ms)[0m  [1m[34mSELECT "menus".* FROM "menus"[0m
+  ↳ app/views/admin/menus/index.html.erb:7
+  Rendered admin/menus/index.html.erb within layouts/application (6.4ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 250ms (Views: 233.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/admin/homes/top" for 10.0.2.2 at 2020-08-19 07:43:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  Rendered admin/homes/top.html.erb within layouts/application (0.8ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 112ms (Views: 107.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/genres" for 10.0.2.2 at 2020-08-19 07:43:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::GenresController#index as HTML
+  Rendering admin/genres/index.html.erb within layouts/application
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/admin/genres/index.html.erb:20
+  Rendered admin/genres/index.html.erb within layouts/application (3.0ms)
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 118ms (Views: 103.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/admin/homes/top" for 10.0.2.2 at 2020-08-19 07:43:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  Rendered admin/homes/top.html.erb within layouts/application (1.6ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 110ms (Views: 104.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/menus" for 10.0.2.2 at 2020-08-19 07:44:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::MenusController#index as HTML
+  Rendering admin/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.8ms)[0m  [1m[34mSELECT "menus".* FROM "menus"[0m
+  ↳ app/views/admin/menus/index.html.erb:7
+  Rendered admin/menus/index.html.erb within layouts/application (4.6ms)
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 115ms (Views: 109.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/homes/top" for 10.0.2.2 at 2020-08-19 07:44:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::HomesController#top as HTML
+  Rendering admin/homes/top.html.erb within layouts/application
+  Rendered admin/homes/top.html.erb within layouts/application (1.3ms)
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 111ms (Views: 104.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/admin/sign_out" for 10.0.2.2 at 2020-08-19 07:44:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+Adn4GBjdnJ41vzRZD1vavLoNbSgr4Rsmn5D/xHuulIbVisxPZ4qA00qeeyWeyKKOmubMt7bsiwO/xdxg+NSXQ=="}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/admin/sign_in
+Completed 302 Found in 14ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/sign_in" for 10.0.2.2 at 2020-08-19 07:44:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb within layouts/application
+  Rendered admin/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 105ms (Views: 103.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/schools/sign_up" for 10.0.2.2 at 2020-08-19 07:44:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RegistrationsController#new as HTML
+  Rendering public/registrations/new.html.erb within layouts/application
+  Rendered public/shared/_error_messages.html.erb (0.6ms)
+  Rendered public/shared/_links.html.erb (0.9ms)
+  Rendered public/registrations/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 163ms (Views: 151.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/schools" for 10.0.2.2 at 2020-08-19 07:44:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ewDL/e71DFN5VJMOCFBhUGKVuo2wkxDyXSg+9FDdi0ytgsVg8xXz+cwOePXIzX4hf4ToIr3aRCBov2q5+uuoNQ==", "school"=>{"name"=>"吉田小学校", "email"=>"yoshida@gmail.com", "postcode"=>"1234567", "street_address"=>"東京都足立区北千住１−１−１", "phone_number"=>"00012345678", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSchool Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "schools" WHERE "schools"."email" = ? LIMIT ?[0m  [["email", "yoshida@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE School Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "schools" WHERE "schools"."email" = ? LIMIT ?[0m  [["email", "yoshida@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSchool Create (2.3ms)[0m  [1m[32mINSERT INTO "schools" ("email", "encrypted_password", "name", "postcode", "street_address", "phone_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "yoshida@gmail.com"], ["encrypted_password", "$2a$12$Ig0IiegDMu6jsDvsxqlEI.jxLKabG67KENFoiTvZ/AoTj5KtNleDG"], ["name", "吉田小学校"], ["postcode", "1234567"], ["street_address", "東京都足立区北千住１−１−１"], ["phone_number", "00012345678"], ["created_at", "2020-08-19 07:44:18.014640"], ["updated_at", "2020-08-19 07:44:18.014640"]]
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/public/menus
+Completed 302 Found in 279ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-19 07:44:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  Rendered public/menus/index.html.erb within layouts/application (2.9ms)
+  [1m[36mSchool Load (0.8ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 111ms (Views: 106.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-19 07:44:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.8ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  Rendered public/menus/index.html.erb within layouts/application (3.8ms)
+  [1m[36mSchool Load (0.7ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 107ms (Views: 100.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/public/schools.1" for 10.0.2.2 at 2020-08-19 07:44:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SchoolsController#index as 
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:3
+  Rendering public/schools/index.html.erb within layouts/application
+  Rendered public/schools/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 137ms (Views: 112.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/public/menus/new" for 10.0.2.2 at 2020-08-19 07:44:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#new as HTML
+  Rendering public/menus/new.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/menus/new.html.erb:12
+  Rendered public/menus/new.html.erb within layouts/application (10.0ms)
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 114ms (Views: 98.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/public/schools.1" for 10.0.2.2 at 2020-08-19 07:44:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SchoolsController#index as 
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:3
+  Rendering public/schools/index.html.erb within layouts/application
+  Rendered public/schools/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 154ms (Views: 129.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/public/schools/1" for 10.0.2.2 at 2020-08-19 07:44:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SchoolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchool Load (0.9ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:7
+  Rendering public/schools/show.html.erb within layouts/application
+  [1m[36mMenu Load (0.5ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."school_id" = ?[0m  [["school_id", 1]]
+  ↳ app/views/public/schools/show.html.erb:4
+  Rendered public/schools/show.html.erb within layouts/application (4.5ms)
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 110ms (Views: 91.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/public/menus/new" for 10.0.2.2 at 2020-08-19 07:44:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#new as HTML
+  Rendering public/menus/new.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/menus/new.html.erb:12
+  Rendered public/menus/new.html.erb within layouts/application (3.9ms)
+  [1m[36mSchool Load (1.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 122ms (Views: 115.2ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/public/menus" for 10.0.2.2 at 2020-08-19 07:45:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XK6rK2fuh2bAaTJMSA2iGmsS3c1LJ1NxUcqkLGJ26oRfKzXgPzh1jFFDSqFYSwP3u282fMM26qF7kywisB17RA==", "menu"=>{"title"=>"クリスマスメニュー", "staple_food"=>"カレーピラフ", "soup"=>"ミネストローネ", "main_dish"=>"なし", "dessert"=>"クリスマスカップケーキ", "side_dish"=>"なし", "drink"=>"ジョア", "energy"=>"640", "fat"=>"14.3", "protein"=>"22.1", "sodium"=>"2.5", "comment"=>"クリスマス献立", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f9b3e5909f8 @tempfile=#<Tempfile:/tmp/RackMultipart20200819-7948-ip9ymy.jpeg>, @original_filename="IMG_0552.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"menu[image]\"; filename=\"IMG_0552.jpeg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"投稿する"}
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/menus_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/public/menus_controller.rb:17
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/menus_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/public/menus_controller.rb:17
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-08-19 07:45:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (0.5ms)
+  [1m[36mSchool Load (0.7ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 97ms (Views: 92.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/public/schools.1" for 10.0.2.2 at 2020-08-19 07:45:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SchoolsController#index as 
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:3
+  Rendering public/schools/index.html.erb within layouts/application
+  Rendered public/schools/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 154ms (Views: 127.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-19 07:45:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.6ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  Rendered public/menus/index.html.erb within layouts/application (3.8ms)
+  [1m[36mSchool Load (1.1ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 113ms (Views: 105.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/public/schools.1" for 10.0.2.2 at 2020-08-19 07:46:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SchoolsController#index as 
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:3
+  Rendering public/schools/index.html.erb within layouts/application
+  Rendered public/schools/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 141ms (Views: 118.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/public/schools/1" for 10.0.2.2 at 2020-08-19 07:46:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SchoolsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchool Load (0.7ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:7
+  Rendering public/schools/show.html.erb within layouts/application
+  [1m[36mMenu Load (0.5ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."school_id" = ?[0m  [["school_id", 1]]
+  ↳ app/views/public/schools/show.html.erb:4
+  Rendered public/schools/show.html.erb within layouts/application (2.5ms)
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 101ms (Views: 92.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-19 07:46:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.5ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  Rendered public/menus/index.html.erb within layouts/application (3.0ms)
+  [1m[36mSchool Load (0.7ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 118ms (Views: 111.5ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mSchool Load (1.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mMenu Load (0.5ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 10.0.2.2 at 2020-08-20 02:07:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/vagrant/.rbenv/versions/2.5.7/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Public::HomesController#top as HTML
+  Rendering public/homes/top.html.erb within layouts/application
+  Rendered public/homes/top.html.erb within layouts/application (1.3ms)
+  [1m[36mSchool Load (0.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 771ms (Views: 762.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/public/schools.1" for 10.0.2.2 at 2020-08-20 02:07:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SchoolsController#index as 
+  [1m[36mSchool Load (1.1ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:3
+  Rendering public/schools/index.html.erb within layouts/application
+  Rendered public/schools/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 128ms (Views: 100.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-20 02:07:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.4ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  Rendered public/menus/index.html.erb within layouts/application (2.3ms)
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 99ms (Views: 83.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/public/schools.1" for 10.0.2.2 at 2020-08-20 02:07:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SchoolsController#index as 
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:3
+  Rendering public/schools/index.html.erb within layouts/application
+  Rendered public/schools/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 141ms (Views: 116.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-20 02:07:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.4ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  Rendered public/menus/index.html.erb within layouts/application (2.4ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 91ms (Views: 85.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/public/schools.1" for 10.0.2.2 at 2020-08-20 02:07:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::SchoolsController#index as 
+  [1m[36mSchool Load (0.6ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/public/schools_controller.rb:3
+  Rendering public/schools/index.html.erb within layouts/application
+  Rendered public/schools/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 133ms (Views: 109.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/public/menus/new" for 10.0.2.2 at 2020-08-20 02:07:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#new as HTML
+  Rendering public/menus/new.html.erb within layouts/application
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres"[0m
+  ↳ app/views/public/menus/new.html.erb:12
+  Rendered public/menus/new.html.erb within layouts/application (14.5ms)
+  [1m[36mSchool Load (0.3ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 116ms (Views: 89.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/public/menus" for 10.0.2.2 at 2020-08-20 02:07:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Public::MenusController#index as HTML
+  Rendering public/menus/index.html.erb within layouts/application
+  [1m[36mMenu Load (0.3ms)[0m  [1m[34mSELECT "menus".* FROM "menus" WHERE "menus"."status" = ?[0m  [["status", 0]]
+  ↳ app/views/public/menus/index.html.erb:3
+  Rendered public/menus/index.html.erb within layouts/application (2.3ms)
+  [1m[36mSchool Load (0.4ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" WHERE "schools"."id" = ? ORDER BY "schools"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:40
+Completed 200 OK in 84ms (Views: 80.2ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mSchool Load (1.5ms)[0m  [1m[34mSELECT  "schools".* FROM "schools" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mMenu Load (0.9ms)[0m  [1m[34mSELECT  "menus".* FROM "menus" LIMIT ?[0m  [["LIMIT", 11]]

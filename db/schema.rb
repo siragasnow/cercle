@@ -36,10 +36,12 @@ ActiveRecord::Schema.define(version: 2020_08_13_065055) do
   end
 
   create_table "favorites", force: :cascade do |t|
-    t.integer "school_id", null: false
-    t.integer "menu_id", null: false
+    t.integer "school_id"
+    t.integer "menu_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["menu_id"], name: "index_favorites_on_menu_id"
+    t.index ["school_id"], name: "index_favorites_on_school_id"
   end
 
   create_table "genres", force: :cascade do |t|

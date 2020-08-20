@@ -16,8 +16,10 @@ Rails.application.routes.draw do
     registrations: 'public/registrations',
   }
   namespace :public do
-    resources :schools, only: [:index, :show, :edit, :update, :destroy]
-    resources :menus
+    resources :schools, only: [:index, :show, :edit, :update]
+    resources :menus do
+      resource :favorites, only: [:create, :destroy]
+    end
   end
 
   root to: 'public/homes#top'

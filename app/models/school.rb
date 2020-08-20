@@ -5,6 +5,7 @@ class School < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :menus, dependent: :destroy
+  has_many :favorites, dependent: :destroy
 
   validates :name, presence: true
   validates :postcode, presence: true

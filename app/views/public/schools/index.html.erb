@@ -1,2 +1,36 @@
-<h1>Public::Schools#index</h1>
-<p>Find me in app/views/public/schools/index.html.erb</p>
+<h2><%= @school.name %>さんの職員室</h2>
+<div class="row">
+	<table class="table table-bordered">
+		<tr>
+			<th class="warning">学校名</th>
+			<td><%= @school.name %></td>
+		</tr>
+		<tr>
+			<th class="warning">メールアドレス</th>
+			<td><%= @school.email %></td>
+		</tr>
+		<tr>
+			<th class="warning">郵便番号</th>
+			<td><%= @school.postcode %></td>
+		</tr>
+		<tr>
+			<th class="warning">住所</th>
+			<td><%= @school.street_address %></td>
+		</tr>
+		<tr>
+			<th class="warning">電話番号</th>
+			<td><%= @school.phone_number %></td>
+		</tr>
+	</table>
+	<div class="link">
+		<div class="link-box">
+			<%= link_to "My投稿一覧", public_school_path(@school.id), class:"btn btn-warning" %>
+		</div>
+		<div class="link-box">
+			<%= link_to "お気に入り一覧", "#", class:"btn btn-warning" %>
+		</div>
+		<div class="link-box">
+			<%= link_to "編集する", edit_public_school_path(@school.id), class:"btn btn-warning" %>
+		</div>
+	</div>
+</div>
