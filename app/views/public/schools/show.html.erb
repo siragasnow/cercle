@@ -9,7 +9,7 @@
 						<h4><%= menu.title %></h4>
 					<% end %>
 				</td>
-				<td>お気に入り数</td>
+				<td>お気に入り数：<%= menu.favorites.count%></td>
 				<% if @school.id == current_school.id %>
 				<td><%= menu.status %></td>
 				<% end %>

@@ -1,1 +1,30 @@
-<p>top page</p>
+<div class="row">
+	<div class="menu-list">
+		<% @random.each do |menu| %>
+			<div class="menu-list-box">
+				<div class="col-md-6">
+					<%= attachment_image_tag menu, :image, :fill, 300, 170, fallback: "no-image.jpg", size:'300x170' %>
+				</div>
+				<div class="col-md-6">
+					<h2><%= menu.school.name %></h2>
+					<ul>
+						<li>主食：<%= menu.staple_food %></li>
+						<li>主菜：<%= menu.main_dish %></li>
+						<li>副菜：<%= menu.side_dish %></li>
+						<li>汁物：<%= menu.soup %></li>
+						<li>デザート：<%= menu.dessert %></li>
+						<li>飲み物：<%= menu.drink %></li>
+					</ul>
+				</div>
+			</div>
+		<% end %>
+		<div class="more">
+			<p><%= link_to "もっとみる", public_menus_path %></p>
+			<div class="more-dot">
+				<p>・</p>
+				<p>・</p>
+				<p>・</p>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,3 +1,6 @@
+<p class="top-back" style="float: right;">
+	<%= link_to "会員一覧にもどる", admin_schools_path %>　/　<%= link_to "Topにもどる", admin_homes_top_path %>
+
 <h2><%= @school.name %>さんの職員室</h2>
 <div class="row">
 	<table class="table table-bordered">
@@ -22,15 +25,4 @@
 			<td><%= @school.phone_number %></td>
 		</tr>
 	</table>
-	<div class="link">
-		<div class="link-box">
-			<%= link_to "My投稿一覧", public_school_path(@school.id), class:"btn btn-warning" %>
-		</div>
-		<div class="link-box">
-			<%= link_to "お気に入り一覧", public_favorites_index_path, class:"btn btn-warning" %>
-		</div>
-		<div class="link-box">
-			<%= link_to "編集する", edit_public_school_path(@school.id), class:"btn btn-warning" %>
-		</div>
-	</div>
 </div>

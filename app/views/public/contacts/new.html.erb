@@ -1,2 +1,18 @@
-<h1>Public::Contacts#new</h1>
-<p>Find me in app/views/public/contacts/new.html.erb</p>
+<h2>Contact us.</h2>
+<div class="row">
+	<%= form_for(@contact, url: public_contacts_path) do |f| %>
+		<div class="contact-form">
+			<table class="table">
+				<tr>
+					<td><%= f.text_field :name, size: "60", placeholder:"例）〇〇小学校" %></td>
+				</tr>
+				<tr>
+					<td><%= f.email_field :email, size: "60", placeholder:"例）〇〇＠〇〇.〇〇" %></td>
+				</tr>
+				<tr>
+					<td><%= f.text_area :message, size: "60x8", placeholder:"例）新しいジャンルを追加してください等" %></td>
+				</tr>
+			</table>
+			<%= f.submit "SEND", class:"btn btn-primary" %>
+	<% end %>
+</div>

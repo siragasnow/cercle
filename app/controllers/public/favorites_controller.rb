@@ -1,6 +1,7 @@
 class Public::FavoritesController < ApplicationController
 
   def index
+    @menus = current_school.favorite_menus
   end
 
   def create

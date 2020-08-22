@@ -2,10 +2,10 @@
 	<div class="contents">
 		<p>管理者トップページ</p>
 		<ul>
-			<li><%= link_to "投稿一覧", admin_menus_path%>を確認する</li>
-			<li><%= link_to "会員一覧", "#" %>を確認する</li>
+			<li><%= link_to "投稿一覧", admin_menus_path %>を確認する</li>
+			<li><%= link_to "会員一覧", admin_schools_path %>を確認する</li>
 			<li><%= link_to "ジャンル設定", admin_genres_path %>を行う</li>
-			<li><%= link_to "問い合わせ", "#" %>お問い合わせを確認する</li>
+			<li><%= link_to "お問い合わせ", admin_contacts_path %>を確認する</li>
 		</ul>
 	</div>
 	<div class="contents">
@@ -13,7 +13,7 @@
 		<table clasS="table">
 			<tr>
 				<th>管理者名</th>
-				<td><%#= @admin.name %></td>
+				<td><%= @admin.name %></td>
 			</tr>
 			<tr>
 				<th>メールアドレス</th>

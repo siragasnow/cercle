@@ -17,14 +17,15 @@
 					<p>
 						<% if menu.favorited_by?(current_school) %>
               				<%= link_to public_menu_favorites_path(menu), method: :delete do %>
-                				<span class="glyphicon glyphicon-heart"><%= menu.favorites.count%></span>
+                				<span class="btn btn-danger">お気に入りから外す</span>
               				<% end %>
             			<% else %>
               				<%= link_to public_menu_favorites_path(menu), method: :post do %>
-                				<span class="glyphicon glyphicon-heart-empty"><%= menu.favorites.count %></span>
+                				<span class="btn btn-primary">お気に入りにする</span>
               				<% end %>
             			<% end %>
 					</p>
+					<p>お気に入りされた数：<%= menu.favorites.count %></p>
 				</div>
 			</div>
 			<div class="col-md-4">

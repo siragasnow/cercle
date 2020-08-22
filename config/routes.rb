@@ -6,9 +6,8 @@ Rails.application.routes.draw do
     get 'homes/top' => 'homes/top'
     resources :genres, only: [:index, :create, :destroy]
     resources :menus, only: [:index, :edit, :update]
-    get 'contacts/index'
-    get 'contacts/show'
-    get 'schools/index'
+    resources :schools, only: [:index, :show]
+    resources :contacts, only: [:index, :show, :update]
   end
 
   devise_for :schools, controllers: {
@@ -20,8 +19,15 @@ Rails.application.routes.draw do
     resources :menus do
       resource :favorites, only: [:create, :destroy]
     end
+    resources :contacts, only: [:new, :create]
   end
 
+  get 'public/contacts/confirm' => 'public/contacts#confirm'
+
+  get 'public/favorites/index' => 'public/favorites#index'
+
   root to: 'public/homes#top'
+  get 'public/homes/about' => 'public/homes#about'
+  get 'public/homes/service' => 'public/homes#service'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
