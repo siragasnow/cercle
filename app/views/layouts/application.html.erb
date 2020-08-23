@@ -18,12 +18,8 @@
                 <%= link_to image_tag('/assets/logo.jpg', width:"200px", height:"116px"), admin_homes_top_path %>
             </div>
             <div class="collapse navbar-collapse">
-              <form class="navbar-form navbar-right" role="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="検索キーワード">
-                </div>
-                <button type="submit" class="btn btn-default">検索</button>
-              </form>
+              <div class="navbar-form navbar-right">
+              </div>
             </div>
             <nav class="navbar navbar-right">
               <div class="container-fluid">
@@ -45,12 +41,12 @@
                 <%= link_to image_tag('/assets/logo.jpg', width:"200px", height:"116px"), root_path %>
             </div>
             <div class="collapse navbar-collapse">
-              <form class="navbar-form navbar-right" role="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="検索キーワード">
-                </div>
-                <button type="submit" class="btn btn-default">検索</button>
-              </form>
+              <div class="navbar-form navbar-right">
+                <%= search_form_for @search, url:public_menus_path do |f| %>
+                  <%= f.text_field :title_or_staple_food_or_main_dish_or_side_dish_or_soup_or_dessert_or_drink_cont, placeholder: '検索キーワード', class: "form-control" %>
+                  <%= f.submit ("検索"), class: "btn btn-success" %>
+                <% end %>
+              </div>
             </div>
             <nav class="navbar navbar-right">
               <div class="container-fluid">
@@ -75,12 +71,12 @@
               <%= link_to image_tag('/assets/logo.jpg', width:"200px", height:"116px"), root_path %>
             </div>
             <div class="collapse navbar-collapse">
-              <form class="navbar-form navbar-right" role="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="検索キーワード">
-                </div>
-                <button type="submit" class="btn btn-default">検索</button>
-              </form>
+              <div class="navbar-form navbar-right">
+                <%= search_form_for @search, url:public_menus_path do |f| %>
+                  <%= f.text_field :title_or_staple_food_or_main_dish_or_side_dish_or_soup_or_dessert_or_drink_cont, placeholder: '検索キーワード', class: "form-control" %>
+                  <%= f.submit ("検索"), class: "btn btn-success" %>
+                <% end %>
+              </div>
             </div>
             <nav class="navbar navbar-right">
               <div class="container-fluid">

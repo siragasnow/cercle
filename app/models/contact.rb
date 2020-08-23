@@ -1,5 +1,5 @@
 class Contact < ApplicationRecord
-	belongs_to :school
+	belongs_to :school, optional: true
 
 
 	enum contact_status: {

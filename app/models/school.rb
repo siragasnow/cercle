@@ -7,7 +7,7 @@ class School < ApplicationRecord
   has_many :menus, dependent: :destroy
   has_many :favorites, dependent: :destroy
   has_many :favorite_menus, through: :favorites, source: :menu
-  has_many :contacts, dependent: :destroy
+  has_many :contacts
 
   validates :name, presence: true
   validates :postcode, presence: true

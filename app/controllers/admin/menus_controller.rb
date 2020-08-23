@@ -1,6 +1,7 @@
 class Admin::MenusController < ApplicationController
   def index
   	@menus = Menu.all
+    @menus = @menus.order(params[:change])
   end
 
   def edit

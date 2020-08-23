@@ -1,0 +1,52 @@
+<p class="top-back" style="float: right;">
+	<%= link_to "お問い合わせ一覧にもどる", admin_contacts_path %>　/　<%= link_to "Topにもどる", admin_homes_top_path %>
+</p>
+
+<h2><%= @contact.name %>さんからのお問い合わせ内容</h2>
+<div class="contact-form row">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>名前</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><%= @contact.name %></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>メールアドレス</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><%= @contact.email %></td>
+			</tr>
+		</tbody>
+	</table>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>お問い合わせ内容</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><%= @contact.message %></td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="contacts-status">
+		<%= form_with(model: @contact, url: admin_contact_path(@contact.id)) do |f| %>
+			<%= f.radio_button :contact_status, :対応待ち %>
+			<%= f.label :contact_status, "対応待ち", {value: :対応待ち} %>
+			<%= f.radio_button :contact_status, :対応済み %>
+			<%= f.label :contact_status, "対応済み", {value: :対応済み} %>
+			<%= f.submit "変更する", class:"btn btn-primary" %>
+		<% end %>
+	</div>
+</div>

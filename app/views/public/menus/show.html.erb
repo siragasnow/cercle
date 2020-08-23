@@ -12,19 +12,21 @@
 		<div clas="menu-school-name">
 			<h3>by　<%= @menu.school.name %></h3>
 		</div>
-		<div class="favorite">
-			<p>
-				<% if @menu.favorited_by?(current_school) %>
-              		<%= link_to public_menu_favorites_path(@menu), method: :delete do %>
-                		<span class="glyphicon glyphicon-heart">：<%= @menu.favorites.count%></span>
-              		<% end %>
-            	<% else %>
-              		<%= link_to public_menu_favorites_path(@menu), method: :post do %>
-                		<span class="glyphicon glyphicon-heart-empty">：<%= @menu.favorites.count %></span>
-              		<% end %>
-            	<% end %>
-			</p>
-		</div>
+		<% if school_signed_in? %>
+			<div class="favorite">
+				<p>
+					<% if @menu.favorited_by?(current_school) %>
+	              		<%= link_to public_menu_favorites_path(@menu), method: :delete do %>
+	                		<span class="glyphicon glyphicon-heart">：<%= @menu.favorites.count%></span>
+	              		<% end %>
+	            	<% else %>
+	              		<%= link_to public_menu_favorites_path(@menu), method: :post do %>
+	                		<span class="glyphicon glyphicon-heart-empty">：<%= @menu.favorites.count %></span>
+	              		<% end %>
+	            	<% end %>
+				</p>
+			</div>
+		<% end %>
 		<div class="menu-list">
 			<ul>
 				<li>主食：<%= @menu.staple_food %></li>
@@ -58,3 +60,10 @@
 		</div>
 	<% end %>
 </div>
+
+<% if school_signed_in? %>
+<% else %>
+<p class="top-back" style="float: right;">
+	<%= link_to "献立一覧にもどる", public_menus_path %>
+</p>
+<% end %>

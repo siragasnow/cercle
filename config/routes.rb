@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :genres, only: [:index, :create, :destroy]
     resources :menus, only: [:index, :edit, :update]
     resources :schools, only: [:index, :show]
-    resources :contacts, only: [:index, :show, :update]
+    resources :contacts, only: [:index, :edit, :update]
   end
 
   devise_for :schools, controllers: {
