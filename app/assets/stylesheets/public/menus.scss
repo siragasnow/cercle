@@ -1,3 +1,47 @@
 // Place all the styles related to the public/menus controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.menu-contents {
+	background-color: #FFFFdd;
+	border: solid 2px #BBBBBB;
+	margin: 25px;
+	border-radius: 10px;
+}
+
+.menu-box {
+	text-align: center;
+}
+
+.menu-box-left {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.menu-image img {
+	border: solid 2px #BBBBBB;
+	border-radius: 10px;
+}
+
+.menu-box-center {
+}
+
+.menu-box-right {
+	margin-top: 25px;
+}
+
+.menu-box-right ul {
+	list-style: none;
+	font-size: 16px;
+	text-align: left;
+	line-height: 1.5;
+}
+
+.edit-area {
+	margin-top: 20px;
+}
+
+.menu-list ul {
+	list-style: none;
+	font-size: 16px;
+}

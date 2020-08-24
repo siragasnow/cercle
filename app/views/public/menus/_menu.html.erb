@@ -1,21 +1,15 @@
-<h2>献立一覧</h2>
-<div class="field">
-      <p>並び替え</p>
-      <%= select_tag :change, options_for_select("新しい順": "id asc","古い順": "id desc"), include_blank: true %>
-</div>
-
 <% menus.each do |menu| %>
-	<div class="row">
+	<div class="menu-contents row">
 		<div class="menu-box">
-			<div class="col-md-4">
+			<div class="menu-box-left col-md-4">
 				<div class="menu-image">
 					<%= attachment_image_tag menu, :image, :fill, 300, 170, fallback: "no-image.jpg", size:'300x170' %>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="menu-box-center col-md-4">
 				<div class="school-name">
 					<%= link_to public_menu_path(menu.id) do %>
-						<h4><%= menu.title %></h4>
+						<h3><%= menu.title %></h3>
 					<% end %>
 					<h4>　by.<%= menu.school.name %></h4>
 					<% if school_signed_in? %>
@@ -34,7 +28,7 @@
 					<p>お気に入りされた数：<%= menu.favorites.count %></p>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="menu-box-right col-md-4">
 				<ul>
 					<li>主食：<%= menu.staple_food %></li>
 					<li>主菜：<%= menu.main_dish %></li>
@@ -47,3 +41,4 @@
 		</div>
 	</div>
 <% end %>
+

@@ -14,7 +14,7 @@
 			<tr>
 				<td><%= attachment_image_tag menu, :image, :fill, 300, 170, fallback: "no-image.jpg", size:'180x100' %>
 				<td><%= menu.school.name %></td>
-				<td><%= menu.title %></td>
+				<td><%= link_to menu.title, public_menu_path(menu) %></td>
 				<td>
 					<%= link_to public_menu_favorites_path(menu), method: :delete do %>
                 		<span class="btn btn-danger">お気に入りから外す</span>
@@ -24,4 +24,5 @@
 			<% end %>
 		</tbody>
 	</table>
+	<%= paginate @menus %>
 </div>

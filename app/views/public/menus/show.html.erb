@@ -1,14 +1,20 @@
-<h2><%= @menu.title %></h2>
 <div class="row">
+	<% if @menu.school == current_school %>
+		<div class="edit-area" style="float: right;">
+			<%= link_to "編集", edit_public_menu_path(@menu), class: "btn btn-primary" %>
+			<%= link_to "削除", public_menu_path(@menu), method: :delete, "data-confirm" => "投稿が削除されます。本当によろしいですか？", class: "btn btn-danger" %>
+		</div>
+	<% end %>
+	<h2><%= @menu.title %></h2>
 	<div class="genre">
 		<p>ジャンル：<%= @menu.genre.name %></p>
 	</div>
-	<div class="col-md-6">
+	<div class="col-xs-6">
 		<div class="menu-image">
 			<%= attachment_image_tag @menu, :image, :fill, 500, 300, fallback: "no-image.jpg", size:'500x300' %>
 		</div>
 	</div>
-	<div class="col-md-6">
+	<div class="col-xs-5 col-xs-offset-1">
 		<div clas="menu-school-name">
 			<h3>by　<%= @menu.school.name %></h3>
 		</div>
@@ -17,12 +23,14 @@
 				<p>
 					<% if @menu.favorited_by?(current_school) %>
 	              		<%= link_to public_menu_favorites_path(@menu), method: :delete do %>
-	                		<span class="glyphicon glyphicon-heart">：<%= @menu.favorites.count%></span>
+	                		<span class="glyphicon glyphicon-heart"></span>
 	              		<% end %>
+	              		お気に入りされた数：<%= @menu.favorites.count%>
 	            	<% else %>
 	              		<%= link_to public_menu_favorites_path(@menu), method: :post do %>
-	                		<span class="glyphicon glyphicon-heart-empty">：<%= @menu.favorites.count %></span>
+	                		<span class="glyphicon glyphicon-heart-empty"></span>
 	              		<% end %>
+	              		お気に入りに入れる
 	            	<% end %>
 				</p>
 			</div>
@@ -39,26 +47,32 @@
 		</div>
 		<div class="nutritional-value">
 			<h4>栄養価（一人当たり）</h4>
-			<ul>
-				<li>エネルギー：<%= @menu.energy %></li>
-				<li>タンパク質：<%= @menu.protein %></li>
-				<li>脂質：<%= @menu.fat %></li>
-				<li>塩分量：<%= @menu.sodium %></li>
-			</ul>
+			<table class="nutritional-value-table table table-bordered">
+				<tr>
+					<th class="active">エネルギー</th>
+					<td><%= @menu.energy %> kcal</td>
+				</tr>
+				<tr>
+					<th class="active">タンパク質</th>
+					<td><%= @menu.protein %> g</td>
+				</tr>
+				<tr>
+					<th class="active">脂質</th>
+					<td><%= @menu.fat %> g</td>
+				</tr>
+				<tr>
+					<th class="active">塩分量</th>
+					<td><%= @menu.sodium %> g</td>
+				</tr>
+			</table>
 		</div>
 	</div>
-	<div class="comment">
+	<div class="comment col">
 		<h3>コメント</h3>
 		<div class="comment-area">
 			<p><%= @menu.comment %></p>
 		</div>
 	</div>
-	<% if @menu.school == current_school %>
-		<div class="edit-area">
-			<%= link_to "編集", edit_public_menu_path(@menu), class: "btn btn-primary" %>
-			<%= link_to "削除", public_menu_path(@menu), method: :delete, "data-confirm" => "投稿が削除されます。本当によろしいですか？", class: "btn btn-danger" %>
-		</div>
-	<% end %>
 </div>
 
 <% if school_signed_in? %>

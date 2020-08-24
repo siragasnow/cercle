@@ -1,11 +1,13 @@
 class Public::SchoolsController < ApplicationController
+  before_action :authenticate_school!
+
   def index
     @school = current_school
   end
 
   def show
     @school = School.find(params[:id])
-    @menus = @school.menus
+    @menus = @school.menus.page(params[:page]).per(8)
   end
 
   def edit

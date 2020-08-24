@@ -1,6 +1,11 @@
+<h2>献立一覧</h2>
+
 <% if @search_menus %>
 	<%= render 'menu', menus: @search_menus %>
+	<%= paginate @search_menus %>
 <% else %>
 	<%= render 'menu', menus: @menus %>
+	<%= paginate @menus %>
 <% end %>
+
 

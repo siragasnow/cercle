@@ -1,6 +1,8 @@
 class Public::MenusController < ApplicationController
+  before_action :authenticate_school!, only: [:new, :create, :edit, :update, :destroy]
+
   def index
-    @menus = Menu.where(status: :公開中)
+    @menus = Menu.where(status: :公開中).page(params[:page]).per(8)
   end
 
   def show
@@ -38,4 +40,5 @@ class Public::MenusController < ApplicationController
   def menu_params
     params.require(:menu).permit(:genre_id, :title, :staple_food, :main_dish, :side_dish, :soup, :dessert, :drink, :energy, :protein, :fat, :sodium, :comment, :image, :status)
   end
+
 end

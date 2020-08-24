@@ -1,7 +1,8 @@
 class Public::FavoritesController < ApplicationController
+  before_action :authenticate_school!
 
   def index
-    @menus = current_school.favorite_menus
+    @menus = current_school.favorite_menus.page(params[:page]).per(8)
   end
 
   def create

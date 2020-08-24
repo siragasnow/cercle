@@ -18,6 +18,9 @@ Rails.application.routes.draw do
     resources :schools, only: [:index, :show, :edit, :update]
     resources :menus do
       resource :favorites, only: [:create, :destroy]
+      collection do
+        match 'search' => 'menus#search', via: [:get, :post]
+      end
     end
     resources :contacts, only: [:new, :create]
   end

@@ -1,6 +1,6 @@
 class Public::HomesController < ApplicationController
 	def top
-		@random = Menu.order("RANDOM()").limit(3)
+		@random = Menu.where(status: :公開中).order("RANDOM()").limit(3)
 	end
 
 	def about
