@@ -1,5 +1,5 @@
 class Public::SchoolsController < ApplicationController
-  before_action :authenticate_school!
+  before_action :authenticate_school!, only: [:show, :edit, :update]
 
   def index
     @school = current_school
@@ -7,7 +7,11 @@ class Public::SchoolsController < ApplicationController
 
   def show
     @school = School.find(params[:id])
-    @menus = @school.menus.page(params[:page]).per(8)
+    if @school.id == current_school.id
+      @menus = @school.menus.page(params[:page]).per(8)
+    else
+      @menus = @school.menus.where(status: :公開中).page(params[:page]).per(8)
+    end
   end
 
   def edit

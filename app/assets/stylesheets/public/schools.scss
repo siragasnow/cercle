@@ -1,3 +1,25 @@
 // Place all the styles related to the public/schools controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.school-title h2 {
+	padding-bottom: 20px;
+	border-bottom: solid 2px #BBBBBB;
+	margin-bottom: 20px;
+}
+
+.school-table {
+}
+
+.link {
+	margin-bottom: 30px;
+}
+
+.link-box {
+	margin-top: 10px;
+	text-align: center;
+}
+
+.my-menu-list-contents {
+	margin-top: 10px;
+}

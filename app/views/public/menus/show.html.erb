@@ -5,32 +5,34 @@
 			<%= link_to "削除", public_menu_path(@menu), method: :delete, "data-confirm" => "投稿が削除されます。本当によろしいですか？", class: "btn btn-danger" %>
 		</div>
 	<% end %>
-	<h2><%= @menu.title %></h2>
-	<div class="genre">
-		<p>ジャンル：<%= @menu.genre.name %></p>
+	<div class="menu-title">
+		<h2><%= @menu.title %></h2>
+		<div class="genre">
+			<p>ジャンル：<%= @menu.genre.name %></p>
+		</div>
 	</div>
 	<div class="col-xs-6">
 		<div class="menu-image">
-			<%= attachment_image_tag @menu, :image, :fill, 500, 300, fallback: "no-image.jpg", size:'500x300' %>
+			<%= attachment_image_tag @menu, :image, :fill, 500, 330, fallback: "no-image.jpg", size:'500x330' %>
 		</div>
 	</div>
+
 	<div class="col-xs-5 col-xs-offset-1">
 		<div clas="menu-school-name">
-			<h3>by　<%= @menu.school.name %></h3>
+			<h4>by　<%=link_to @menu.school.name, public_school_path(@menu.school) %></h4>
 		</div>
 		<% if school_signed_in? %>
 			<div class="favorite">
 				<p>
 					<% if @menu.favorited_by?(current_school) %>
 	              		<%= link_to public_menu_favorites_path(@menu), method: :delete do %>
-	                		<span class="glyphicon glyphicon-heart"></span>
+	                		<span class="glyphicon glyphicon-heart" style="color: red;"></span>
 	              		<% end %>
 	              		お気に入りされた数：<%= @menu.favorites.count%>
 	            	<% else %>
-	              		<%= link_to public_menu_favorites_path(@menu), method: :post do %>
-	                		<span class="glyphicon glyphicon-heart-empty"></span>
+	              		<%= link_to public_menu_favorites_path(@menu), method: :post, class:"btn btn-default" do %>
+	                		<span class="glyphicon glyphicon-heart-empty">お気に入りに入れる</span>
 	              		<% end %>
-	              		お気に入りに入れる
 	            	<% end %>
 				</p>
 			</div>
@@ -47,7 +49,7 @@
 		</div>
 		<div class="nutritional-value">
 			<h4>栄養価（一人当たり）</h4>
-			<table class="nutritional-value-table table table-bordered">
+			<table class="nutritional-value-table table table-bordered" style="text-align: center;">
 				<tr>
 					<th class="active">エネルギー</th>
 					<td><%= @menu.energy %> kcal</td>
@@ -67,13 +69,16 @@
 			</table>
 		</div>
 	</div>
-	<div class="comment col">
-		<h3>コメント</h3>
+
+	<div class="comment col-xs-6">
+		<h3><strong>コメント</strong></h3>
 		<div class="comment-area">
-			<p><%= @menu.comment %></p>
+			<p><%=safe_join(@menu.comment.split("\n"),tag(:br)) %></p>
 		</div>
 	</div>
+
 </div>
+
 
 <% if school_signed_in? %>
 <% else %>

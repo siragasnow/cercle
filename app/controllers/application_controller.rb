@@ -3,6 +3,6 @@ class ApplicationController < ActionController::Base
 
 	def set_search
 		@search = Menu.where(status: :公開中).ransack(params[:q])
-		@search_menus = @search.result.page(params[:page]).per(8)
+		@search_menus = @search.result.page(params[:page]).per(8).reverse_order
 	end
 end

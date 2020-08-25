@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.menu-list-title h2 {
+	padding-bottom: 20px;
+	border-bottom: solid 2px #BBBBBB;
+}
+
 .menu-contents {
 	background-color: #FFFFdd;
 	border: solid 2px #BBBBBB;
@@ -41,7 +46,89 @@
 	margin-top: 20px;
 }
 
+.menu-title {
+	padding-bottom: 10px;
+	border-bottom: solid 2px #BBBBBB;
+	margin-bottom: 20px;
+}
+
+.menu-list {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	line-height: 1.5;
+}
+
+.nutritional-value h4 {
+	padding-bottom: 10px;
+	border-bottom: solid 4px #BBBBBB;
+	margin-bottom: 10px;
+}
+
+
 .menu-list ul {
 	list-style: none;
 	font-size: 16px;
+}
+
+.comment {
+	margin-bottom: 30px;
+}
+
+.comment h3 {
+	text-align: center;
+	width: 200px;
+	color: #364e96;
+  	padding: 0.5em 0;
+  	border-top: solid 3px #364e96;
+  	border-bottom: solid 3px #364e96;
+}
+
+.comment-area {
+	font-size: 16px;
+	width: 650px;
+	height: 180px;
+	border: solid 2px #888888;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.form {
+	margin-bottom: 30px;
+}
+
+.step-title {
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+.step-title h3 {
+	position: relative;
+  	overflow: hidden;
+  	padding: 1.5rem 2rem 1.5rem 130px;
+  	border-top: 3px solid #FFCC66;
+}
+
+.step-title h3:before {
+  position: absolute;
+  top: -150%;
+  left: -100px;
+  width: 200px;
+  height: 300%;
+  content: '';
+  -webkit-transform: rotate(25deg);
+  transform: rotate(25deg);
+  background: #FFCC66;
+}
+
+.step-title h3 span {
+  font-size: 40px;
+  font-size: 4rem;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: block;
+  padding-top: 3px;
+  padding-left: 16px;
+  color: #fff;
 }

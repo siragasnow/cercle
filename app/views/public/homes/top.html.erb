@@ -1,4 +1,39 @@
+<div class="home-main-visual row">
+	<div class="main-visual">
+		<div class="main-visual-icon">
+			<i class="fas fa-spinner"></i>
+		</div>
+		<div class="main-visual-title">
+			<h2>cercle　〜学校栄養士の輪〜</h2>
+		</div>
+		<div class="main-visual-text">
+			<p>
+				献立に困ったときはありませんか？<br>
+				cercleはそんなあなたを周りの人たちがサポートしてくれます！<br>
+				みんなで子供たちに笑顔を届けましょう！<br>
+			</p>
+		</div>
+		<div class="main-visual-contents">
+			<div class="col-xs-4">
+				<i class="fab fa-quora"></i>
+				<p><%= link_to "cercleって？", public_homes_about_path %></p>
+			</div>
+			<div class="col-xs-4">
+				<i class="fab fa-servicestack"></i>
+				<p><%= link_to "cercleってなにができるの？", public_homes_service_path %></p>
+			</div>
+			<div class="col-xs-4">
+				<i class="fas fa-sign-in-alt"></i>
+				<p><%= link_to "登録してみよう！", new_school_registration_path %></p>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="row">
+	<div class="top-menu-title">
+		<h2>cercleにはこんな献立が投稿されています</h2>
+	</div>
 	<div class="top-menu-list">
 		<% @random.each do |menu| %>
 			<div class="top-menu-list-box">

@@ -1,28 +1,30 @@
 <h2>お気に入り一覧</h2>
 <div class="row">
-	<table class="table table-bordered">
-		<thead>
-			<tr>
-				<th></th>
-				<th>学校名</th>
-				<th>タイトル</th>
-				<th>お気に入り</th>
-			</tr>
-		</thead>
-		<tbody>
-			<% @menus.each do |menu| %>
-			<tr>
-				<td><%= attachment_image_tag menu, :image, :fill, 300, 170, fallback: "no-image.jpg", size:'180x100' %>
-				<td><%= menu.school.name %></td>
-				<td><%= link_to menu.title, public_menu_path(menu) %></td>
-				<td>
-					<%= link_to public_menu_favorites_path(menu), method: :delete do %>
-                		<span class="btn btn-danger">お気に入りから外す</span>
-              		<% end %>
-              	</td>
-			</tr>
-			<% end %>
-		</tbody>
-	</table>
+	<div class="col-xs-10 col-xs-offset-1">
+		<table class="table table-bordered" style="text-align: center;">
+			<thead >
+				<tr>
+					<th class="warning"></th>
+					<th class="warning">学校名</th>
+					<th class="warning">タイトル</th>
+					<th class="warning">お気に入り</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @menus.each do |menu| %>
+				<tr>
+					<td><%= attachment_image_tag menu, :image, :fill, 300, 170, fallback: "no-image.jpg", size:'180x100' %>
+					<td><%= menu.school.name %></td>
+					<td><%= link_to menu.title, public_menu_path(menu) %></td>
+					<td>
+						<%= link_to public_menu_favorites_path(menu), method: :delete do %>
+	                		<span class="btn btn-danger">お気に入りから外す</span>
+	              		<% end %>
+	              	</td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
 	<%= paginate @menus %>
 </div>

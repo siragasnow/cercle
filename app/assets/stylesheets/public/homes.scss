@@ -3,6 +3,65 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* topページ */
+
+.home-main-visual {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.main-visual {
+  text-align: center;
+}
+
+.main-visual-icon {
+  font-size: 48px;
+  color: #AAAAAA;
+}
+
+.main-visual-title {
+  color: #3CB371;
+  margin-bottom: 20px;
+}
+
+.main-visual-text {
+  font-size: 18px;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+
+.main-visual-contents i {
+  font-size: 48px;
+}
+
+.main-visual-contents p {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.top-menu-title {
+  margin-bottom: 20px;
+}
+
+.top-menu-title h2 {
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem 1rem 4rem;
+  color: #fff;
+  border-radius: 100vh 0 0 100vh;
+  background: #FFCC33;
+}
+
+.top-menu-title h2:before {
+  position: absolute;
+  top: calc(50% - 7px);
+  left: 10px;
+  width: 14px;
+  height: 14px;
+  content: '';
+  border-radius: 50%;
+  background: #fff;
+}
+
 .top-menu-list {
   margin-top: 0px;
 }
@@ -79,4 +138,55 @@
   line-height: 3;
   background-color: rgba(255,255,255,0.7);
   border-radius: 10px;
+}
+
+/* serviceページ */
+
+.service-title h2 {
+  padding-bottom: 10px;
+  border-bottom: solid 2px #BBBBBB;
+  margin-bottom: 20px;
+}
+
+.service-image {
+  width: 100%;
+  height: 300px;
+  background-image: image-url("service.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.service-text {
+  width: 100%;
+  height: 300px;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 10px;
+  border: solid 2px #FF5192;
+  padding: 20px;
+  line-height: 2;
+}
+
+.service-text h4 {
+  font-size: 30px;
+  color: #FF5192;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.service-text i {
+  font-size: 24px;
+  color: #FF5192;
+}
+
+.service-text p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.service-button {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
 }

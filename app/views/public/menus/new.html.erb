@@ -1,69 +1,72 @@
 <h2>★献立を投稿しましょう★</h2>
 <div class="row">
 	<%= form_for(@menu, url: public_menus_path) do |f| %>
-	<div class="step1">
-		<div class="step-title">
-			<h4>１．献立のタイトルの入力ととジャンルの選択をしましょう！</h4>
+		<div class="form">
+			<div class="step-title">
+				<h3><span>１．</span>献立のタイトルの入力ととジャンルの選択をしましょう！</h3>
+			</div>
+			<table class="table">
+				<%= f.text_field :title, size: "80", placeholder:"例）一般的な和食メニュー" %>
+				<tr>
+					<th><%= f.label :genre_id, "ジャンル" %></th>
+					<td><%= f.collection_select :genre_id, Genre.all, :id, :name %></td>
+				</tr>
+			</table>
+			<div class="step-title">
+				<h3><span>２．</span>献立を入力しましょう！</h3>
+			</div>
+			<table class="table">
+				<tr>
+					<th>主食</th>
+					<td><%= f.text_field :staple_food, size: "30", placeholder:"例）ご飯" %></td>
+					<th>汁物</th>
+					<td><%= f.text_field :soup, size: "30", placeholder:"例）味噌汁" %></td>
+				</tr>
+				<tr>
+					<th>主菜</th>
+					<td><%= f.text_field :main_dish, size: "30", placeholder:"例）鯖の塩焼き" %></td>
+					<th>デザート</th>
+					<td><%= f.text_field :dessert, size: "30", placeholder:"例）みかん" %></td>
+				</tr>
+				<tr>
+					<th>副菜</th>
+					<td><%= f.text_field :side_dish, size: "30", placeholder:"例）切り干し大根の含め煮" %></td>
+					<th>飲み物</th>
+					<td><%= f.text_field :drink, size: "30", placeholder:"例）牛乳" %></td>
+				</tr>
+			</table>
+			<div class="step-title">
+				<h3><span>３．</span>栄養素を入力しましょう！（一人当たり）</h3>
+			</div>
+			<table class="table">
+				<tr>
+					<th>エネルギー</th>
+					<td><%= f.text_field :energy, placeholder:"例）650" %>　kcal</td>
+					<th>脂質</th>
+					<td><%= f.text_field :fat, placeholder:"例）15.0" %>　g</td>
+				</tr>
+				<tr>
+					<th>タンパク質</th>
+					<td><%= f.text_field :protein, placeholder:"例）25.0" %>　g</td>
+					<th>塩分量</th>
+					<td><%= f.text_field :sodium, placeholder:"例）2.0" %>　g</td>
+				</tr>
+			</table>
+			<div class="step-title">
+				<h3><span>４．</span>コメントを入力しましょう！</h3>
+			</div>
+			<div class="menu-form">
+				<%= f.text_area :comment, size: "80x7", placeholder:"例）一般的な献立です。比較的安価な鯖を用いているので、予算と相談して魚を変更しても良いと思います。" %>
+			</div>
+			<div class="step-title">
+				<h3><span>５．</span>写真を選択しましょう！</h3>
+			</div>
+			<div class="menu-form">
+				<%= f.attachment_field :image %>
+			</div>
+			<div class="step-title">
+				<%= f.submit "献立を公開する", class:"btn btn-primary" %>
+			</div>
 		</div>
-		<table class="table">
-			<%= f.text_field :title, size: "80", placeholder:"例）一般的な和食メニュー" %>
-			<tr>
-				<th><%= f.label :genre_id, "ジャンル" %></th>
-				<td><%= f.collection_select :genre_id, Genre.all, :id, :name %></td>
-			</tr>
-		</table>
-		<div class="step-title">
-			<h4>２．献立を入力しましょう！</h4>
-		</div>
-		<table class="table">
-			<tr>
-				<th>主食</th>
-				<td><%= f.text_field :staple_food, size: "30", placeholder:"例）ご飯" %></td>
-				<th>汁物</th>
-				<td><%= f.text_field :soup, size: "30", placeholder:"例）味噌汁" %></td>
-			</tr>
-			<tr>
-				<th>主菜</th>
-				<td><%= f.text_field :main_dish, size: "30", placeholder:"例）鯖の塩焼き" %></td>
-				<th>デザート</th>
-				<td><%= f.text_field :dessert, size: "30", placeholder:"例）みかん" %></td>
-			</tr>
-			<tr>
-				<th>副菜</th>
-				<td><%= f.text_field :side_dish, size: "30", placeholder:"例）切り干し大根の含め煮" %></td>
-				<th>飲み物</th>
-				<td><%= f.text_field :drink, size: "30", placeholder:"例）牛乳" %></td>
-			</tr>
-		</table>
-		<div class="step-title">
-			<h4>３．栄養素を入力しましょう！（一人当たり）</h4>
-		</div>
-		<table class="table">
-			<tr>
-				<th>エネルギー</th>
-				<td><%= f.text_field :energy, placeholder:"例）650" %>　kcal</td>
-				<th>脂質</th>
-				<td><%= f.text_field :fat, placeholder:"例）15.0" %>　g</td>
-			</tr>
-			<tr>
-				<th>タンパク質</th>
-				<td><%= f.text_field :protein, placeholder:"例）25.0" %>　g</td>
-				<th>塩分量</th>
-				<td><%= f.text_field :sodium, placeholder:"例）2.0" %>　g</td>
-			</tr>
-		</table>
-		<div class="step-title">
-			<h4>４．コメントを入力しましょう！</h4>
-		</div>
-		<div class="menu-form">
-			<%= f.text_area :comment, size: "80x7", placeholder:"例）一般的な献立です。比較的安価な鯖を用いているので、予算と相談して魚を変更しても良いと思います。" %>
-		</div>
-		<div class="step-title">
-			<h4>５．写真を入力しましょう！</h4>
-		</div>
-		<div class="menu-form">
-			<%= f.attachment_field :image %>
-		</div>
-	<%= f.submit "投稿する", class:"btn btn-primary" %>
 	<% end %>
 </div>

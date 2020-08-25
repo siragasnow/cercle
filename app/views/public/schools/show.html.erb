@@ -1,9 +1,16 @@
-<h2>My献立一覧</h2>
+<div class="school-title">
+	<% if @school.id == current_school.id %>
+		<h2>My献立一覧</h2>
+	<% else %>
+		<h2><%= @school.name %>さんの献立一覧</h2>
+	<% end %>
+</div>
+
 <div class="row">
 	<table class="table table-bordered">
 		<% @menus.each do |menu| %>
-			<tr>
-				<td><%= attachment_image_tag menu, :image, :fill, 300, 170, fallback: "no-image.jpg", size:'180x100' %></td>
+			<tr style="text-align: center;" >
+				<td class="warning"><%= attachment_image_tag menu, :image, :fill, 300, 170, fallback: "no-image.jpg", size:'180x100' %></td>
 				<td>
 					<%= link_to public_menu_path(menu.id) do %>
 						<h4><%= menu.title %></h4>
@@ -11,7 +18,7 @@
 				</td>
 				<td>お気に入り数：<%= menu.favorites.count%></td>
 				<% if @school.id == current_school.id %>
-				<td><%= menu.status %></td>
+					<td><%= menu.status %></td>
 				<% end %>
 			</tr>
 		<% end %>

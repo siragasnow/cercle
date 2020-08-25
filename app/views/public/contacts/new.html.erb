@@ -1,8 +1,8 @@
 <h2>Contact us.</h2>
 <div class="row">
 	<%= form_for(@contact, url: public_contacts_path) do |f| %>
-		<div class="contact-form">
-			<table class="table">
+		<div class="contact-form col-xs-10 col-xs-offset-1">
+			<table class="table" style="text-align: center;">
 				<tr>
 					<td><%= f.text_field :name, size: "60", placeholder:"例）〇〇小学校" %></td>
 				</tr>
@@ -13,6 +13,9 @@
 					<td><%= f.text_area :message, size: "60x8", placeholder:"例）新しいジャンルを追加してください等" %></td>
 				</tr>
 			</table>
-			<%= f.submit "SEND", class:"btn btn-primary" %>
+			<div style="text-align: center;">
+				<%= f.submit "SEND", class:"btn btn-primary" %>
+			</div>
+		</div>
 	<% end %>
 </div>

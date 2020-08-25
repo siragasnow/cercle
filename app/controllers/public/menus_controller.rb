@@ -2,7 +2,7 @@ class Public::MenusController < ApplicationController
   before_action :authenticate_school!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @menus = Menu.where(status: :公開中).page(params[:page]).per(8)
+    @menus = Menu.where(status: :公開中).page(params[:page]).per(8).reverse_order
   end
 
   def show
