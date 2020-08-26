@@ -2,7 +2,7 @@ class Admin::MenusController < ApplicationController
   before_action :authenticate_admin!
 
   def index
-  	@menus = Menu.all
+  	@menus = Menu.page(params[:page]).per(20).reverse_order
   end
 
   def edit

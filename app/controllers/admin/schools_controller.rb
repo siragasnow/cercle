@@ -2,7 +2,7 @@ class Admin::SchoolsController < ApplicationController
   before_action :authenticate_admin!
 
   def index
-  	@schools = School.all
+  	@schools = School.page(params[:page]).per(20).reverse_order
   end
 
   def show
