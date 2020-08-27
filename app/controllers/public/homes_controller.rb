@@ -1,6 +1,10 @@
 class Public::HomesController < ApplicationController
 	def top
-		@random = Menu.where(status: :公開中).order("RANDOM()").limit(3)
+		if Rails.env.development?
+			@random = Menu.where(status: :公開中).order("RANDOM()").limit(3)
+		else
+			@random = Menu.where(status: :公開中).order("RAND()").limit(3)
+		end
 	end
 
 	def about
