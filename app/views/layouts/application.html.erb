@@ -103,6 +103,11 @@
       <div class="container">
         <%= yield %>
       </div>
+      <span id="back">
+        <%= link_to "#", data: {"turbolinks"=>false} do %>
+          <i class="fas fa-chevron-circle-up"></i>
+        <% end %>
+      </span>
     </main>
 
     <footer>
