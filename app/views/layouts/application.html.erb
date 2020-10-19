@@ -103,6 +103,18 @@
       <div class="container">
         <%= yield %>
       </div>
+      <% if school_signed_in? %>
+        <%= link_to new_public_menu_path do %>
+          <div id="new-menu-icon">
+            <p>
+              投稿<br>
+              ページへ
+            </p>
+            <i class="fas fa-edit"></i>
+          </div>
+        <% end %>
+      <% end %>
+      </div>
       <span id="back">
         <%= link_to "#", data: {"turbolinks"=>false} do %>
           <i class="fas fa-chevron-circle-up"></i>

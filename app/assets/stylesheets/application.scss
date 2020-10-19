@@ -107,11 +107,33 @@ ul.footer-menu li {
 #back {
   position: fixed;
   right: 50px;
-  bottom: 50px;
+  bottom: 30px;
 }
 
 #back i {
-  font-size: 40px;
+  font-size: 60px;
   color: #808080;
+}
+
+#new-menu-icon {
+  position: fixed;
+  right: 50px;
+  bottom: 100px;
+  background-color: #FFAD90;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 100px;
+}
+
+#new-menu-icon p {
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 0px;
+  margin-top: 3px;
+}
+
+#new-menu-icon i {
+  font-size: 20px;
 }
 

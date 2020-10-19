@@ -25,3 +25,19 @@ $(function() {
 		event.preventDefault();
 	});
 });
+
+$(function(){
+  	$('#new-menu-icon').mouseover(function(){
+    	$('#new-menu-icon').css({'background-color': '#9BF9CC'});
+  	});
+  	$('#new-menu-icon').mouseout(function(){
+    	$('#new-menu-icon').css({'background-color': '#FFAD90'});
+  	});
+});
+
+$(function(){
+	$(window).on("scroll touchmove", function(){
+			$("#new-menu-icon").stop();
+			$("#new-menu-icon").css('display', 'none').delay(300).fadeIn('fast');
+	});
+});
