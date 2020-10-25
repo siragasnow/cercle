@@ -63,7 +63,8 @@
 				<h3><span>５．</span>写真を選択しましょう！</h3>
 			</div>
 			<div class="menu-form">
-				<%= f.attachment_field :image %>
+				<%= f.file_field :image, class: 'img_field', style: 'display: none;' %>
+				<%= attachment_image_tag @menu, :image, fallback: 'no-image.jpg', onClick: "$('.img_field').click()", class: 'center-block img-thumbnail img-responsive img_prev' %>
 			</div>
 			<div class="step-title">
 				<%= f.submit "献立を公開する", class:"btn btn-primary" %>
